@@ -19,7 +19,7 @@ Airbnb's ESLint config with TypeScript support
 ### Build tool
 - vite
 
-### Lint, styling
+### Linting, code formatting
 - eslint
 - prettier
 
