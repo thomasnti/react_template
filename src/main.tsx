@@ -1,9 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { WrappedApp } from './App';
+
+import App from './App';
+import { Provider } from './infrastructure/services/store';
+import './assets/global.css';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <React.StrictMode>
-    <WrappedApp />
-  </React.StrictMode>
+  <Provider>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </Provider>
 );

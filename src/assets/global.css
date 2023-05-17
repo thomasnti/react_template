@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.app {
+  padding: 80px 20px;
+}

@@ -1,23 +1,43 @@
-import { HashRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
 
-import Home from './pages/Home';
-import NotFound from './pages/NotFound';
+import Header from './ui/components/Header/Header';
+import Front from './ui/components/Front/Front';
+import Auth from './ui/components/Auth/Auth';
+import User from './ui/components/User/User';
 
-export function App() {
+//! Old example
+// export function App() {
+//   return (
+//     <div>
+//       <Routes>
+//         <Route path="/" element={<Home />} />
+//         <Route path="*" element={<NotFound />} />
+//       </Routes>
+//     </div>
+//   );
+// }
+
+// export function WrappedApp() {
+//   return (
+//     <HashRouter>
+//       <App />
+//     </HashRouter>
+//   );
+// }
+
+function App() {
   return (
-    <div>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </div>
+    <BrowserRouter>
+      <div className="app">
+        <Header />
+        <Routes>
+          <Route path="/auth" element={<Auth />} />
+          <Route path="/user" element={<User />} />
+          <Route path="/" Component={Front} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
-export function WrappedApp() {
-  return (
-    <HashRouter>
-      <App />
-    </HashRouter>
-  );
-}
+export default App;
