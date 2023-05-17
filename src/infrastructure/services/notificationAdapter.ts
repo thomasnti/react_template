@@ -1,5 +1,5 @@
 /* eslint-disable no-alert */
-import { NotificationService } from '../../application/ports';
+import { NotificationService } from '../../application/contracts/ports';
 
 export default function useNotifier(): NotificationService {
   return {

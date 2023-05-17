@@ -1,4 +1,4 @@
-import { Product } from '../../../domain/product';
+import { Product } from '../../../application/entities/product';
 import { useStore } from '../../../infrastructure/services/store';
 import Cookie from '../Cookie/Cookie';
 

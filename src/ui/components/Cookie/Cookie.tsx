@@ -2,7 +2,7 @@
 // import { Product } from '../../domain/product';
 // import { useAddToCart } from '../../application/addToCart';
 
-import { contains } from '../../../domain/cart';
+import { contains } from '../../../application/entities/cart';
 import { Product } from '../../../domain/product';
 import {
   useCartStorage,

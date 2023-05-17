@@ -1,5 +1,5 @@
 // Services and Adapters has the same meaning
-import { PaymentService } from '../../application/ports';
+import { PaymentService } from '../../application/contracts/ports';
 import fakeApi from '../api/fakeApi';
 
 // We explicitly type the return value of usePayment. This way TypeScript will check that the function actually returns an object that contains all the methods declared in the interface.

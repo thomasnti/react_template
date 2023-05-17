@@ -1,4 +1,4 @@
-import { ingredients } from '../../../domain/product';
+import { ingredients } from '../../../application/entities/product';
 import { useUserStorage } from '../../../infrastructure/services/storageAdapter';
 
 export default function Profile() {

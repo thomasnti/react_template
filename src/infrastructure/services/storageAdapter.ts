@@ -2,7 +2,7 @@ import {
   CartStorageService,
   OrdersStorageService,
   UserStorageService,
-} from '../../application/ports';
+} from '../../application/contracts/ports';
 import { useStore } from './store';
 
 export function useUserStorage(): UserStorageService {

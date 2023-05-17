@@ -1,10 +1,10 @@
-import { UserName } from '../domain/user';
-import useAuth from '../infrastructure/services/authAdapter';
-import { useUserStorage } from '../infrastructure/services/storageAdapter';
+import useAuth from '../../infrastructure/services/authAdapter';
+import { useUserStorage } from '../../infrastructure/services/storageAdapter';
+import { UserName } from '../entities/user';
 
 // Note that the port interfaces are in the _application layer_,
 // but their implementation is in the _adapter_ layer.
-import { AuthenticationService, UserStorageService } from './ports';
+import { AuthenticationService, UserStorageService } from '../contracts/ports';
 
 export default function useAuthenticate() {
   // Usually, we access services through Dependency Injection.

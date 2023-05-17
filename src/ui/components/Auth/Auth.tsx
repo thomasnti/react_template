@@ -2,8 +2,8 @@
 import React, { useState } from 'react';
 
 import { Navigate, redirect } from 'react-router-dom';
-import { UserName } from '../../../domain/user';
-import useAuthenticate from '../../../application/authenticate';
+import { UserName } from '../../../application/entities/user';
+import useAuthenticate from '../../../application/usecases/authenticate';
 
 import styles from './Auth.module.css';
 

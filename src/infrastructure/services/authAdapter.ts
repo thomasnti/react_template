@@ -1,5 +1,5 @@
-import { AuthenticationService } from '../../application/ports';
-import { UserName } from '../../domain/user';
+import { AuthenticationService } from '../../application/contracts/ports';
+import { UserName } from '../../application/entities/user';
 import fakeApi from '../api/fakeApi';
 
 export default function useAuth(): AuthenticationService {
