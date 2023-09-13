@@ -1,4 +1,4 @@
-import { Product } from '../../domain/product';
+import { Product } from '../../application/entities/product';
 
 const cookies: Product[] = [
   {

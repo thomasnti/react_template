@@ -3,10 +3,10 @@
 // import { useAddToCart } from '../../application/addToCart';
 
 import { contains } from '../../../application/entities/cart';
-import { Product } from '../../../domain/product';
+import { Product } from '../../../application/entities/product';
 import {
   useCartStorage,
-  useUserStorage,
+  // useUserStorage,
 } from '../../../infrastructure/services/storageAdapter';
 
 // import { useUserStorage, useCartStorage } from '../../services/storageAdapter';
@@ -19,7 +19,7 @@ type CookieProps = {
 };
 
 export default function Cookie({ cookie }: CookieProps) {
-  const { user } = useUserStorage();
+  // const { user } = useUserStorage();
   const { cart } = useCartStorage();
   // const { addToCart } = addToCart();
 

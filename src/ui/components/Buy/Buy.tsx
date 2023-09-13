@@ -5,10 +5,10 @@ import {
   useCartStorage,
   useUserStorage,
 } from '../../../infrastructure/services/storageAdapter';
-import { UserName } from '../../../domain/user';
 import currentDatetime from '../../../utilities/datetime';
 
 import styles from './Buy.module.css';
+import { UserName } from '../../../application/entities/user';
 
 export default function Buy() {
   const { orderProducts } = useOrderProducts();

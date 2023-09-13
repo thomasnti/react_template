@@ -3,12 +3,14 @@ import { render, screen } from '@testing-library/react';
 import { describe, it } from 'vitest';
 import { MemoryRouter } from 'react-router-dom';
 
-import { App, WrappedApp } from './App';
+// import { App, WrappedApp } from './App';
+import App from './App';
 
 describe('App', () => {
   it('Renders hello world', () => {
     // ARRANGE
-    render(<WrappedApp />);
+    // render(<WrappedApp />);
+    render(<App />);
     // ACT
     // ASSERT
     expect(

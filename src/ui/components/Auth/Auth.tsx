@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react';
 
-import { Navigate, redirect } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import { UserName } from '../../../application/entities/user';
 import useAuthenticate from '../../../application/usecases/authenticate';
 
