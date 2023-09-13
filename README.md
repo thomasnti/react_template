@@ -36,3 +36,9 @@ Update a single dependency (example):
 - vitest
 - testing-library/react
 - jsdom
+
+# Deployment
+### Deploy to Github pages
+https://vitejs.dev/guide/static-deploy.html#github-pages
+
+ Put  `base: '/react_template'` in vite.config
