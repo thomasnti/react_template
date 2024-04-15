@@ -13,7 +13,7 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <Link className={styles.logo} to="/">
-        Co0o0o0o0okie!!!1 🍪
+        Co0o0o0o0okies!!! 🍪🍪🍪
       </Link>
 
       {!user ? (

@@ -15,6 +15,7 @@ export const Provider: React.FC<PropsWithChildren> = ({ children }) => {
   const [cart, setCart] = useState({ products: [] });
   const [orders, setOrders] = useState([]);
 
+  //* Data to be passed in entire application
   const value = {
     user,
     cart,

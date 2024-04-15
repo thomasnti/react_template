@@ -20,3 +20,7 @@
 .contains {
   padding-inline-start: 0.5rem;
 }
+
+.title {
+  color: brown;
+}

@@ -1,7 +1,7 @@
 import { Product } from './product';
 
 export type Cart = {
-  products: Product[]; // array of objects
+  products: Product[]; // array of objects (Products)
 };
 
 export function addProduct(cart: Cart, product: Product): Cart {
