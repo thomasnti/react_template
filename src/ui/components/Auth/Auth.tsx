@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 
 import { Navigate } from 'react-router-dom';
 import { UserName } from '../../../application/entities/user';
-import useAuthenticate from '../../../application/usecases/authenticate';
+import useAuthenticate from '../../../application/usecases/authenticate_functional';
 
 import styles from './Auth.module.css';
 

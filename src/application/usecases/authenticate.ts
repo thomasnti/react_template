@@ -1,29 +1,37 @@
-import useAuth from '../../infrastructure/services/authAdapter';
-import { useUserStorage } from '../../infrastructure/services/storageAdapter';
+/* eslint-disable max-classes-per-file */
+import { IRequest, IRequestHandler, requestHandler } from 'mediatr-ts';
 import { UserName } from '../entities/user';
+import {
+  IAuthenticationService,
+  IUserStorageService,
+} from '../contracts/contracts';
 
-// Note that the port interfaces are in the _application layer_,
-// but their implementation is in the _adapter_ layer.
-import { AuthenticationService, UserStorageService } from '../contracts/ports';
+class Authenticate implements IRequest<void> {
+  name: UserName;
+  email: string; // to eixa Email (type)
 
-export default function useAuthenticate() {
-  // Usually, we access services through Dependency Injection.
-  // Here we can use hooks as a crooked “DI-container”.
+  constructor(name: UserName, email: string) {
+    this.name = name;
+    this.email = email;
+  }
+}
 
-  // The use case function doesn't call third-party services directly,
-  // instead, it relies on the interfaces we declared earlier.
-  const storage: UserStorageService = useUserStorage();
-  const auth: AuthenticationService = useAuth();
+@requestHandler(Authenticate)
+class AuthenticateHandler implements IRequestHandler<Authenticate, void> {
+  private authenticationService: IAuthenticationService;
+  private userStorageService: IUserStorageService;
 
-  // Ideally, we would pass a command as an argument,
-  // which would encapsulate all input data.
-  async function authenticate(name: UserName, email: Email): Promise<void> {
-    const user = await auth.auth(name, email);
-    storage.updateUser(user);
+  constructor(
+    authenticationService: IAuthenticationService,
+    userStorageService: IUserStorageService
+  ) {
+    this.authenticationService = authenticationService;
+    this.userStorageService = userStorageService;
   }
 
-  return {
-    user: storage.user,
-    authenticate,
-  };
+  async handle(value: Authenticate): Promise<void> {
+    const user = await this.authenticationService.auth(value.name, value.email);
+
+    this.userStorageService.updateUser(user);
+  }
 }

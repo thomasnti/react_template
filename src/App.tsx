@@ -4,6 +4,7 @@ import Header from './ui/components/Header/Header';
 import Front from './ui/components/Front/Front';
 import Auth from './ui/components/Auth/Auth';
 import User from './ui/components/User/User';
+import setupMediatr from './dependency_injection/mediatr_setup';
 
 //! Old example
 // export function App() {
@@ -26,6 +27,8 @@ import User from './ui/components/User/User';
 // }
 
 function App() {
+  setupMediatr();
+
   return (
     <BrowserRouter>
       <div className="app">
